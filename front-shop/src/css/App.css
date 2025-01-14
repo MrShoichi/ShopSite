@@ -1,0 +1,156 @@
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.card-container.card {
+  max-width: 350px;
+  padding: 40px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+
+.btn:hover {
+  background-color: #444;
+  border-color: #333;
+}
+
+.card {
+  padding: 20px 25px 30px;
+  margin: 10px auto;
+  border-radius: 4px;
+  font-size: 14px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  padding: 20px 25px 30px;
+  margin: 10px auto;
+  font-size: 14px;
+}
+
+.profile-img-card {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+}
+
+.navbar-nav .nav-item {
+  padding-right: 10px;
+}
+
+.navbar-nav .nav-link {
+  font-size: 16px;
+  padding: 10px 15px;
+}
+
+.navbar-collapse {
+  padding-top: 10px;
+}
+
+.navbar-nav {
+  align-items: flex-end;
+}
+
+.navbar-brand {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand svg {
+  margin-right: 8px;
+}
+
+.cards {
+  position: relative;
+  padding: 1rem;
+  margin: 1rem -15px 0;
+  border-top: 0.2rem solid #f7f7f9;
+}
+
+.card-columns {
+  column-count: 2;
+}
+
+@media (min-width: 992px) {
+  .card-columns {
+    column-count: 4;
+  }
+}
+
+@media (min-width: 1200px) {
+  .card-columns {
+    column-count: 5;
+  }
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+}
+
+.left-column, .right-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-column .card {
+  width: 100%;
+}
+
+img {
+  object-fit: cover;
+  max-height: 400px;
+}
+
+.basket-text {
+  font-size: 15px;
+  color: green;
+}
+.modal.fade.show {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.btn-close {
+  color: #000; /* Черный цвет для крестика */
+  opacity: 1;
+}
+
+.btn-close:hover {
+  color: #ff0000; /* Красный цвет при наведении */
+  opacity: 0.8;
+}
+
+.modal-dialog {
+  max-width: 800px;
+  margin: 50px auto;
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: 5px;
+}
+
+.modal-header {
+  border: none;
+  background: none;
+  font-size: 1.5em;
+}
+
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+  }
+
+  .left-column, .right-column {
+    width: 100%;
+  }
+}
