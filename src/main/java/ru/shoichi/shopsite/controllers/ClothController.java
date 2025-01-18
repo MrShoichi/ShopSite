@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import ru.shoichi.shopsite.dtos.ClothPutRequest;
+import ru.shoichi.shopsite.dtos.ClothRequest;
 import ru.shoichi.shopsite.exceptions.ValidationException;
 import ru.shoichi.shopsite.image.ImageUtil;
 import ru.shoichi.shopsite.jwt.JwtRequest;
@@ -48,7 +50,7 @@ public class ClothController {
 
 
     @PostMapping
-    public ResponseEntity<?> create(@RequestBody Cloth cloth) {
+    public ResponseEntity<?> create(@RequestBody ClothRequest cloth) {
         try {
             service.create(cloth);
             return new ResponseEntity<>(HttpStatus.CREATED);
@@ -59,7 +61,7 @@ public class ClothController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<?> update(@PathVariable(name = "id") int id, @RequestBody Cloth cloth) {
+    public ResponseEntity<?> update(@PathVariable(name = "id") int id, @RequestBody ClothRequest cloth) {
         final boolean updated = service.update(cloth, id);
 
         return updated

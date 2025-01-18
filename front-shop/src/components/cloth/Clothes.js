@@ -50,11 +50,11 @@ class Clothes extends Component {
     }
 
     render() {
-        const { isLoggedIn } = this.props;
+        const { isLoggedIn, user } = this.props;
         if (!isLoggedIn && !this.state.content) {
             return <Navigate to="/" />;
         }
-        if (this.props.user.role !== "admin") {
+        if (user.user.role.name !== "admin") {
             return <Navigate to="/" />;
         }
         return (
@@ -75,9 +75,10 @@ class Clothes extends Component {
 }
 
 function mapStateToProps(state) {
-    const { isLoggedIn } = state.auth;
+    const { isLoggedIn, user } = state.auth;
     return {
         isLoggedIn,
+        user
     };
 }
 

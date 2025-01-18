@@ -27,7 +27,6 @@ public class Image implements Serializable {
 
     @Lob
     @Column(name = "imagedata", length = 1000)
-    @Basic(fetch = FetchType.LAZY)
     private byte[] imageData;
 
     @Override

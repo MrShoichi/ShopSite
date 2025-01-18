@@ -48,13 +48,9 @@ public class Cloth implements Serializable {
     private ClothesType type;
 
     @OneToMany(mappedBy = "cloth", fetch = FetchType.LAZY, orphanRemoval = true)
-    @JsonBackReference
+    @JsonManagedReference
     private Set<BasketItem> items;
 
-    @JsonGetter("id")  // Указываем, что хотим сериализовать только id
-    public int getId() {
-        return id;
-    }
     @PrePersist
     protected void onCreate() {
         this.datePublish = new Date();
