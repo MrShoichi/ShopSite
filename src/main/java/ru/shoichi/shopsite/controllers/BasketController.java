@@ -52,7 +52,7 @@ public class BasketController {
         if (obj != null && !obj.isEmpty()) {
             return new ResponseEntity<>(obj, HttpStatus.OK);
         } else {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>("Товаров нет в корзине нет",HttpStatus.NOT_FOUND);
         }
     }
 

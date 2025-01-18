@@ -55,11 +55,11 @@ class Shop extends Component {
                 });
             },
             (error) => {
+                console.info(error.response.data);
                 this.setState({
                     error:
                         (error.response &&
-                            error.response.data &&
-                            error.response.data.message) ||
+                            error.response.data ) ||
                         error.message ||
                         error.toString(),
                     loading: false,

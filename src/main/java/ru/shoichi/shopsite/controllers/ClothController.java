@@ -28,7 +28,7 @@ public class ClothController {
     public ResponseEntity<?> getClothes() {
         final List<Cloth> cloths = service.readAll();
         if (cloths == null || cloths.isEmpty()) {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>("Товаров нет", HttpStatus.NOT_FOUND);
         }
         cloths.forEach(cloth -> ImageUtil.decompressImage(cloth.getImage()));
         return new ResponseEntity<>(cloths, HttpStatus.OK);
